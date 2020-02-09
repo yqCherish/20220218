@@ -1,6 +1,6 @@
 var x,y;		//鼠标当前在页面上的位置
 var step=10;	//字符显示间距，为了好看，step=0则字符显示没有间距
-var message="Thanks for watching!";		//跟随鼠标要显示的字符串
+var message="处处都是我们的轨迹!";		//跟随鼠标要显示的字符串
 message=message.split("");	//将字符串分割为字符数组
 
 var xpos=new Array()		//存储每个字符的x位置的数组
@@ -39,8 +39,8 @@ function makesnake() {  //重定位每个字符的位置
 		xpos[0]=x+step //第一个字符的坐标位置紧跟鼠标光标
 		ypos[0]=y
 		//上面的算法将保证，如果鼠标光标移动到新位置，则连续调用makenake将会使这些字符一个接一个的移动的新位置
-		// 该算法显示字符串就有点象人类的游行队伍一样， 
-	
+		// 该算法显示字符串就有点象人类的游行队伍一样，
+
 		for (i=0; i<=message.length-1; i++) {
 			var thisspan = eval("span"+(i)+".style");  //妙用eval根据字符串得到该字符串表示的对象
 			thisspan.posLeft=xpos[i];
